@@ -11,9 +11,9 @@ app.get('/api/products', (req, res) => {
   res.json(products);
 });
 
-app.get('/api/products/id', (req, res) => {
+app.get('/api/product/:id', (req, res) => {
   const product = products.find((p) => p._id === req.params.id);
   res.json(product);
 });
 
-app.listen(3000, console.log('Server running on port 5000'));
+app.listen(5001, console.log('Server running on port 5001'));
