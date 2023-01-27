@@ -31,7 +31,8 @@ const PlaceOrderScreen = ({ history }) => {
 
   useEffect(() => {
     if (success) {
-      history.push(`/order/${order}._id`);
+      console.log(order);
+      history.push(`/orders/${order._id}`);
     }
     // eslint-disable-next-line
   }, [history, success]);
